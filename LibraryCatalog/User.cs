@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 namespace LibraryCatalog
 {
     public class User
-    { 
-        public IList<Book> checkedOutBooks { get; set; }
+    {  
+        private IList<Book> checkedOutBooks = new List<Book>();
         public string Name { get; set; }
         public string Email { get; set; }
-
         public void CheckOutBook(Book book)
         {
             if (book.CheckedOut == false)

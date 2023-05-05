@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 namespace LibraryCatalog
 {
     public class Catalog
-    { 
-       public IList<Book> books { get; set; }
+    {
+       private IList<Book> books = new List<Book>();
        public void AddBook(Book book)
        {
             books.Add(book);
